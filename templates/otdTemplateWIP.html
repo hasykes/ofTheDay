@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>______ of the day.</title>
+    </head>
+    <body width='100%' height='100%'>
+		<table border="0" cellpadding="0" cellspacing="0" align='center' height='100%' width='100%' id="bodyTable" style="background-color:#222222;">
+			<tr>
+				<td align="center" valign="top">
+					<table border="0" cellpadding="10" cellspacing="0" height="100%" width=600 id="emailContainer" style="background-color:linen; max-width:600px; table-layout:fixed;" align='center'>
+
+						<tr id="header">
+							<td align="center" valign="top">					
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailHeader" style="table-layout:fixed; border-bottom:2px; border-bottom-color:#777777; border-bottom-style:ridge;" align='center'>											
+									<tr>
+										<td style= "font-size:32px;padding-bottom:30px;" align="center" valign="center">
+											<strong>______ of the Day.</strong>
+										</td>
+									</tr>
+								</table>			
+							</td>
+						</tr>
+					
+						<tr id="wotd">
+						
+							<td align="center" valign="top">					
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContent_1" style="table-layout:fixed;" align='center'>											
+									<tr>
+										<td align="left" valign="top" colspan="3" style="padding-top:5px; padding-bottom:5px; padding-left: 10px;">
+											<a href="http://www.dictionary.com/wordoftheday" style="text-decoration: none; color:#000000"><strong style="font-size:30px;">{{ wotdWord }}</strong></a>
+										</td>
+									</tr>
+									<tr>
+										<td align="left" valign="top" colspan="3" style="padding-top:5px; padding-bottom:5px; padding-left: 10px;">
+										    <span class="pronounce">{{ wotdPronounce }}</span>
+										</td>	
+									</tr>	
+									<tr>
+									    <td align="left" valign="top" colspan="3" style="padding-top:5px; padding-bottom:0px; padding-left: 10px;">
+										    <span class="pos"><em>{{ wotdPos }}</em></span>
+										</td>	
+									</tr>	
+									<tr>	
+									    <td td align="left" valign="center" colspan="3" style="">
+									        <ul style="margin:16px;">
+												{% set counter = 0 -%}
+                                                {% for define in wotdDefines -%}
+						                        <li style="padding-bottom:2px;">{{ define }}</li>
+                                                {% set counter = counter + 1 -%}
+                                                {% endfor -%}
+											</ul>
+											{{ wotdQuote }}
+										</td>
+									</tr>
+									<tr>
+										<td width="30%" align=center style="background-color:#428bca;">
+											<a href="http://www.dictionary.com"><img id="dictLogo" src="http://www.dictionary.com/drc/img/responsive/dcom-logo-8f31c.png" alt="Dictionary.Com Logo" style="display: block;width: auto;height: auto; max-height: 30px;" height=30/></a>
+										</td>
+										<td width=auto></td>
+										<td align="right" valign="top">
+											<span style="font-size:12px; color:#666666;">{{ wotdCite }}</span>
+										</td>
+									</tr>
+								</table>			
+							<br/><hr/>
+							</td>
+						</tr>
+						
+						
+						<tr id="apotd">
+							<td align="center" valign="top">					
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContent_2" style="table-layout:fixed;" align='center'>											
+									<tr>
+										<td align="center" valign="center">
+											<table cellspacing="0" cellpadding="0" border="0" width="100%">
+												<tr>
+													<td align="center" width="100%" height=75>
+														<a href="https://apod.nasa.gov/apod/astropix.html"><img id="nasaLogo" src="https://vignette.wikia.nocookie.net/logopedia/images/6/66/NASA_logo.svg.png/revision/latest/scale-to-width-down/564?cb=20121230054000" alt="Nasa Logo" style="padding-left:'25%';display: block; width:50px; height: auto; max-width:100px;" width="75"></a>
+														<h2 style="margin:0;padding-left:0;width:auto;"><em>Astronomy {{ apodType }}</em></h2>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											<a href="{{ apodSrc }}"><img id="apodImg" src="{{ apodLink }}" alt="Nasa {{ apodType }} of the Day" style="display: block;width: auto;height: auto; max-width:500px;" width="500"></a>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											{{ apodTitle }}
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											<span style="font-size:12px; color:#666666;">{{ apodCite }}</span>
+										</td>
+									</tr>
+								</table>			
+							<br/><hr/>
+							</td>
+						</tr>
+						
+						
+						<tr id="sotd">
+							<td align="center" valign="top">
+							    <table border="0" cellpadding="2" cellspacing="0" width="100%" id="emailContent_3">
+									<tr>
+										<td align="center" valign="top" colspan="2">
+											<h2 class="bPad" style="margin:0;padding:0;width:auto;padding-bottom:10px;"><em>Songs</em></h2>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="center" colspan="1">
+											<a href="https://open.spotify.com/user/1281758300/playlist/2cTwxX2QoR0Xx5YhZ8nZsk"style="text-decoration:none; color:#000000;padding-bottom:3px;">Hayden S.</a>
+										</td>	
+									</tr>
+									<tr>
+										<td align="center" valign="center" rowspan="1" width="1%">
+											<a href="{{ sotdAlbumLink0 }}" style="text-decoration:none; color:#000000;"><img id="albumArt0" src="{{ sotdAlbumArt0 }}" alt="{{ sotdAlbum0 }}" style="display: block;width: auto;height: auto; max-width:100px;" width="100"></a>
+										</td>
+										<td class="sotd" align="left" valign="center" width="35%" style="padding-bottom:5px; padding-right:10px;">
+											<table cellspacing="0" cellpadding="2" width="100%">
+												<tbody>
+													<tr>
+														<td align="left" valign="center">
+															<span style="margin:0; padding-bottom:5px; padding-left:5px; font-size:20px; "><a href="{{ sotdTrackLink0 }}" style="text-decoration:none; color:#000000;">{{ sotdTrack0 }}</a></span>
+														</td>
+													</tr>
+													<tr>
+														<td align="left" valign="center">	
+															<span style="margin:0; font-size:18px; padding-left:5px; "><a href="{{ sotdArtistLink0 }}" style="text-decoration:none; color:#000000;">{{ sotdArtist0 }}</a></span>
+														</td>
+													</tr>
+													<tr>
+														<td align="left" valign="top">
+															<span class="explicit" style="color:red;font-family:courier new;font-size:10px;padding-left:5px;">{{ sotdExplicit0 }}</span>
+														</td>													
+													</tr>	
+												</tbody>
+											</table>
+										</td>
+									</tr>
+
+									<tr>
+										<td align="center" valign="center" colspan="1">
+											<a href="https://open.spotify.com/user/1281758300/playlist/42PkInOgDpT0lugGojqOEl" style="text-decoration: none; color:#000000;padding-bottom:3px;padding-top:3px;">Chloe M.</a>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="center" rowspan="1" width="1%">
+											<a href="{{ sotdAlbumLink0 }}" style="text-decoration:none; color:#000000;"><img id="albumArt0" src="{{ sotdAlbumArt1 }}" alt="{{ sotdAlbum1 }}" style="display: block;width: auto;height: auto; max-width:100px;" width="100"></a>
+										</td>
+										<td class="sotd" align="left" valign="center" width="35%" style="padding-bottom:5px; padding-right:10px;">
+											<table cellspacing="0" cellpadding="2" width="100%">
+												<tbody>
+													<tr>
+														<td align="left" valign="center">
+															<span style="margin:0; padding-bottom:5px; font-size:20px; padding-left:5px; "><a href="{{ sotdTrackLink1 }}" style="text-decoration:none; color:#000000;">{{ sotdTrack1 }}</a></span>
+														</td>
+													</tr>
+													<tr>
+														<td align="left" valign="center">	
+															<span style="margin:0; font-size:18px; padding-left:5px; "><a href="{{ sotdArtistLink1 }}" style="text-decoration:none; color:#000000;">{{ sotdArtist1 }}</a></span>
+														</td>
+													</tr>
+													<tr>
+														<td align="left" valign="top">
+															<span class="explicit" style="color:red;font-family:courier new;font-size:10px; padding-left:5px;">{{ sotdExplicit1 }}</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>								
+								</table>
+							<br/><hr/>
+							</td>
+						</tr>
+						
+						
+						<tr id="motd">
+							<td align="center" valign="top">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContent_4">
+									<tr>
+										<td align="center" valign="top">
+											<a href="https://www.morningbrew.com/?kid=e128d8"><img id="mornBrewLogo" src="https://www.morningbrew.com/latest/wp-content/uploads/2018/02/morning-brew-2018.png" alt="MorningBrew Logo" style="display: block;width: auto;height: auto; max-height:40px; padding-right:10px;" height="40"></a>
+											<h2 class="bPad" style="margin:0;padding:0;width:auto;padding-bottom:10px;"><em>Markets</em></h2>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;table-layout:fixed;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" width="100%">
+												<tr>
+													<th class="ticker">
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ mBrewTickImg[0] }}" style="width:21px;" width="21" style="display: block;width: auto;height: auto;"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[0] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[1] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;color:{{ mBrewTickClr[0] }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[2] }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ mBrewTickImg[1] }}" style="display: block;width:21px;height: auto;" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[3] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[4] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ mBrewTickClr[1] }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[5] }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ mBrewTickImg[2] }}" style="display: block;width:21px;height;" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[6] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[7] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ mBrewTickClr[2] }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[8] }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ manhArrow }}" style="display: block;width:21px;height" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">MANH</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ manhUSD}}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ manhColor }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ manh24Delta }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</th>
+													<th bgcolor="#cccccc" class="hide" style="background-color:#cccccc;border-right-width:2px;border-right-style:solid;border-right-color:#ffffff;border-left-width:2px;border-left-style:solid;border-left-color:#ffffff;" width="2"></th>
+													<th class="ticker">
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ mBrewTickImg[3] }}" style="display: block;width:21px;height" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[9] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[10] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ mBrewTickClr[3] }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[11] }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ mBrewTickImg[4] }}" style="display: block;width:21px;height" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[12] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[13] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ mBrewTickClr[4] }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[14] }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ mBrewTickImg[5] }}" style="display: block;width:21px;height" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[15] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[16] }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ mBrewTickClr[5] }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ mBrewTickTxt[17] }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+														<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+															<tr>
+																<td class="ticker-border" style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#cccccc;">
+																	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;table-layout:auto;" width="100%">
+																		<tr>
+																			<td><img alt="" src="{{ btcArrow }}" style="display: block;width:21px;height" width="21"/></td>
+																			<td style="width:30%;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">BTC</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p style="font-size:14px!important;font-weight:bold;margin-top:15px;margin-bottom:15px;line-height:23px;">{{ btcUSD }}</p>
+																			</td>
+																			<td style="width:30%;text-align:center;">
+																				<p  style="font-size:14px!important;color:{{ btcColor }};margin-top:15px;margin-bottom:15px;line-height:23px;">{{ btc24Delta }}</p>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</th>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr> 
+										<td align="center" valign="center">
+											<span  style="font-size:10px; color:#777777;"><a href="https://www.morningbrew.com/?kid=e128d8" style="text-decoration:none;">For more Market content, Click here to subscribe to Morning Brew!</a></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					    
+						<tr id="footer">	
+							<td class="footer" align="center" valign="bottom" style="padding-bottom:0;font-size:12px">
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailFooter">
+									<tr>
+										<td align="center" valign="bottom">
+											If you no longer wish to receive these emails, please <a href="mailto:ofthedaynewsletter@gmail.com?subject=Unsubscribe%20from%20'of%20the%20Day'&body=Upon%20receipt%20of%20this%20email,%20you%20will%20be%20removed%20from%20the%20'of%20the%20Day'%20mailing%20list%20within%2010%20business%20days.%0ASorry%20to%20see%20you%20go!%20%0A%0A%20--'of%20the%20Day'%20Crew">click here to Unsubscribe.</a>
+										</td>										
+									</tr>
+									<tr>
+										<td align="center" valign="bottom">
+											Made by Hayden Sykes &copy; 2018
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>						
+					
+					</table>		
+				</td>
+			</tr>		
+		</table>
+	</body>
+</html>
