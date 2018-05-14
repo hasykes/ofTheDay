@@ -21,10 +21,10 @@ json
   
 3rd Party:
 
-spotipy: https://github.com/plamere/spotipy
+- spotipy: https://github.com/plamere/spotipy
   - Python wrapper for Spotify API.
-jinja2: http://jinja.pocoo.org/docs/2.10/
+- jinja2: http://jinja.pocoo.org/docs/2.10/
   - HTML Templating 
-coinmarketcap: https://github.com/barnumbirr/coinmarketcap
+- coinmarketcap: https://github.com/barnumbirr/coinmarketcap
   - Python wrapper for coinmarketcap API
 
