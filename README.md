@@ -3,21 +3,21 @@ An HTML Email generator made using Python 3.6, HTML and Inline CSS.
 
 Native Python Libraries:
 
-sys
-urllib.request
-bs4
-  BeautifulSoup
-datetime
-webbrowser
-os
-configparser
-re
-smtplib
-email.mime.multipart
-  MIMEMultipart
-email.mime.text
-  MIMEText
-json
+- sys
+- urllib.request
+- bs4
+  - BeautifulSoup
+- datetime
+- webbrowser
+- os
+- configparser
+- re
+- smtplib
+- email.mime.multipart
+  - MIMEMultipart
+- email.mime.text
+  - MIMEText
+- json
   
 3rd Party:
 
